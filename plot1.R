@@ -1,0 +1,5 @@
+household_power_consumption <- read.csv("~/Coursera/exdata-data-household_power_consumption/household_power_consumption.txt", sep=";", na.strings="?")
+d2<- subset(household_power_consumption, Date=="1/2/2007" | Date=="2/2/2007")
+png("plot1.png", width=480, heigh=480)
+hist(d2$Global_active_power, col="red", xlab="Global Active Power (kilowatts)", main = "Global Active Power")
+dev.off()
